@@ -51,6 +51,7 @@ Thank You!
       uri,
       mode: LaunchMode.externalApplication,
     );
+
   }
 
   void reset() {

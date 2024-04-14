@@ -51,9 +51,15 @@ class SummaryView extends ViewModelWidget<CupcakeViewModel> {
                     ),
                   );
                   messenger.showSnackBar(snackbar);
+                } else {
+                  Navigator.of(context).pushNamedAndRemoveUntil(QuantityView.route, (Route route) => false);
+                  const snackbar = SnackBar(content: Text(
+                    "Se envio correctamente el email al usuario. "
+                  ),);
+                  messenger.showSnackBar(snackbar);
                 }
               },
-              child: const Text('SEND ORDER TO ANOTHER APP'),
+              child: const Text('Enviar detalles por email. '),
             ),
             const SizedBox(height: 8),
             OutlinedButton(
